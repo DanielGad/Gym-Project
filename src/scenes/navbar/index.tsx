@@ -17,6 +17,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  const navbarMobile = "fixed top-[-20px] right-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl";
 
   return (
     <nav>
@@ -75,7 +76,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
         
-        <div className={`${navbarBackground} fixed top-[-20px] right-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl`}>
+        <div className={`${navbarBackground} ${navbarMobile}`}>
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

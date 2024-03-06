@@ -18,7 +18,7 @@
     "react-hook-form": "^7.47.0"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/react-hooks": "^1.0.0",
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.15",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
